@@ -12,3 +12,7 @@
 <p>Para a tela inicial eu usei um carrossel e uma tela de login</p>
 <p>Mais em baixo fiz uma tela de avaliações aonde os visitantes do site podem ver qual é a opinião sobre ele</p>
 <p>No final da página temos o rodapé aonde tem a logo e o nome do site que quando ser clicada e levada para a página inicial, temos também sobre o site e as redes sociais</p>
+
+<h4>Para ver o site siga pelo link:</h4>
+https://kimberlyscaldac.github.io/KimberlyS.github.io/
+
