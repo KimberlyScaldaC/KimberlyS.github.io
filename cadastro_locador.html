@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Abrigo e Ajuda</title>
+  <link rel="shortcut icon" href="icons/aa.png">
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+  
+<body>
+  
+<nav class="navbar navbar-light bg-light menu">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button> 
+  <a class="navbar-brand justify-content-center" href="index.html">
+    <img src="icons/aa.png" width="30" height="30" class="d-inline-block align-top logo" alt="Logo">
+    Abrigo e Ajuda
+  </a>
+  <form class=" justify-content-end">
+    <button type="submit" class="nav-item active" onclick="globo()">
+      <img src="icons/globo.png" alt="globo">
+    </button>
+  </form>
+  <!-- COMEÇA A PARTE DOS BOTÕES -->
+  <div class="collapse justify-content-center navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <input type="button" value="Moradia" onclick="moradia()" class="botao_navbar">
+      </li>
+      <li class="nav-item active">
+        <input type="button" value="Ajuda" onclick="ajuda()" class="botao_navbar">
+      </li>
+      <li class="nav-item active">
+        <input type="button" value="Sobre Nós" onclick="sobre_nos()" class="botao_navbar">
+      </li>
+      <li class="nav-item active">
+        <input type="button" value="Contato" onclick="contato()" class="botao_navbar">
+      </li>
+      <li class="nav-item active">
+        <button type="button" class="botao_navbar" data-toggle="modal" data-target="#modalExemplo">
+          Cadastrar
+        </button>
+      </li>
+    </ul>   
+  </div>
+</nav>
+  
+<!--Fim do menu-->
+
+  
+<!-- Modal Cadastrar -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">Cadastro</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Escolha seu perfil</p>
+        <input type="button" value="Locador" onclick="locador()" class="btn btn-outline-secondary">
+        <input type="button" value="Refugiado" onclick="refugiado()" class="btn btn-outline-secondary">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->  
+  
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div class="row no-gutters fastamento">
+  <div class="col-md-1"></div> 
+  <div class="col-md-10 tela_cadastro">
+    <h5 class="alinhamentoL">Cadastro do Locador</h5>
+    <form>
+      <div class="form-row fastamento">
+      <div class="col-md-4 mb-3">
+          <label for="validationDefault12">Primeiro nome</label>
+          <input type="text" class="form-control" id="validationDefault12" placeholder="Nome" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationDefault11">Sobrenome</label>
+          <input type="text" class="form-control" id="validationDefault11" placeholder="Sobrenome"  required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationDefaultEmail">Email</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            </div>
+            <input type="text" class="form-control" id="validationDefaultEmail" placeholder="Usuário" aria-describedby="inputGroupPrepend2" required>
+          </div>
+        </div>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ --> 
+      <div class="form-row fastamento">
+        <div class="col-md-4 mb-3">
+          <label for="password">Senha</label>
+          <input type="password" placeholder="Senha" id="password" class="form-control" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="confirm_password">Escreva a senha novamente</label>
+          <input type="password" placeholder="Confirme Senha" id="confirm_password" class="form-control" required>
+        </div>
+        <div class="col-md-4 mb-3"></div>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ -->  
+      <div class="form-row fastamento">
+          <div class="form-group col-md-3">
+            <label for="txtCpf">CPF</label>
+            <input type="text" class="form-control" placeholder="cpf" onkeypress="mascaraCpf()" maxlength="14" id ="txtCpf" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="txtTelefone">Telefone</label>
+            <input type="text" class="form-control" placeholder="telefone" id ="txtTelefone" onkeypress="mascaraTelefone()" maxlength="13" required>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputEstado">Estado Civil</label>
+            <select id="inputEstado" class="form-control">
+              <option>...</option>
+              <option >Casada</option>
+              <option >Viúva</option>
+              <option >Solteira</option>
+            </select>
+          </div>
+        <div class="form-group col-md-2">
+          <label for="validationDefault14">Idade</label>
+          <input type="text" class="form-control" id="validationDefault14" placeholder="Idade" required>
+        </div>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ -->  
+      <div class="form-row fastamento">
+        <div class="form-group col-md-6">
+          <label>Foto do perfil</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFileInput" aria-describedby="customFileInput">
+            <label class="custom-file-label" for="customFileInput">Seleciona Foto</label>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Observações</label>
+          <textarea class="form-control" id="validationTextarea" placeholder="Se tiver algo para falar escreva aqui"></textarea>
+        </div>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ --> 
+      <div class="form-row fastamento">
+        <div class="col-md-7 mb-3">
+          <label for="validationDefault10">Endereço</label>
+          <input type="text" class="form-control" id="validationDefault10" placeholder="Rua da jão ou Av.são roque" required>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault08">Bairro</label>
+          <input type="text" class="form-control" id="validationDefault08" placeholder="Aviso" required>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="validationDefault09">Número/casa</label>
+          <input type="text" class="form-control" id="validationDefault09" placeholder="123" required>
+        </div>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ -->  
+      <div class="form-row fastamento">
+        <div class="col-md-6 mb-3">
+          <label for="validationDefaultcidade">Cidade</label>
+          <input type="text" class="form-control" id="validationDefaultcidade" placeholder="Cidade" required>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationDefaultestado">Estado</label>
+          <input type="text" class="form-control" id="validationDefaultestado" placeholder="Estado" required>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationDefaultcep">CEP</label>
+          <input type="text" class="form-control" id="validationDefaultcep" placeholder="CEP" required>
+        </div>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+      <div class="form-row fastamento">
+        <div class="form-group col-md-6">
+          <label for="validationDefaultPais">País</label>
+          <input type="text" class="form-control" id="validationDefaultPais" placeholder="País" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Complemento</label>
+          <textarea class="form-control" placeholder="Se tiver algum complemento do endereço escreva aqui"></textarea>
+        </div>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+      <div class="form-row fastamento">
+        <div class="form-group col-md-3">
+          <label for="validationDefaultPais">Média Salarial</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Até R$1212
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+            <label class="form-check-label" for="exampleRadios2">
+              De R$1213 até R$3500
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="opcao2">
+            <label class="form-check-label" for="exampleRadios3">
+              De R$3501 até R$5000
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="opcao2">
+            <label class="form-check-label" for="exampleRadios4">
+              Mais de R$5000
+            </label>
+          </div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="validationDefaultquartos">Quantadade de quartos</label>
+          <input type="text" class="form-control" id="validationDefaultquartos" placeholder="Quantadade de quartos" required>
+          <label for="validationDefaultbanheiros">Quantadade de banheiros</label>
+          <input type="text" class="form-control" id="validationDefaultbanheiros" placeholder="Quantadade de banheiros" required>
+        </div>
+        <div class="form-group col-md-2"></div>
+        <div class="form-group col-md-4">
+          <div >
+            <label>Imagens da casa:</label>
+            <div class='input-wrapper'>
+              <label for='input-file'>
+                Selecionar um arquivo
+              </label>
+              <input id='input-file' type='file'/>
+              <span id='file-name'></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+      <div class="form-row fastamento">
+        <div class="form-group col-md-10"></div>
+        <div class="form-group col-md-1">
+          <button type="submit" class="pure-button pure-button-primary btn btn-outline-secondary">Cadastrar</button>
+        </div>
+      </div>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ --> 
+    </form>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+<!-- ++++++++++++++++
+   
+  
+  
+  
+  
+  ++++++++++++++++++++++++++ -->
+
+<footer >
+  <div class="row no-gutters tela_rodape footer_content">
+    <div class="col-md-2"></div>
+    <div class="col-md-2 alinhamento centralizar">
+          <a class="" href="#">
+            <img src="icons/aa.png" width="30" height="30" class="d-inline-block  logo" alt="Logo">
+            Abrigo e Ajuda
+          </a>           
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-1 alinhamento centralizar">
+      <a href="" class="">Sobre o site</a>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3 alinhamento centralizar">
+      <div>
+      <div class="box">
+        <h6>Pacto Global</h6>
+        <a href="https://brasil.un.org/">
+          <img src="icons/nacoes-unidas.png" alt="naçõesUnidas">
+        </a>
+        <a href="https://www.instagram.com/">
+          <img src="icons/instagram.png" alt="Instagram">  
+        </a>
+        <a href="https://www.linkedin.com/">
+          <img src="icons/linkedin.png" alt="Linkedin">  
+        </a>
+        <a href="https://twitter.com/">
+          <img src="icons/twitter.png" alt="Twitter">  
+        </a>
+        <a href="https://www.facebook.com/">
+          <img src="icons/facebook.png" alt="Facebook">
+        </a>   
+       </div>
+      </div>
+      
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</footer>
+
+<!-- 
+
+https://getbootstrap.com.br/docs/4.1/components/navbar/? 
+https://fonts.google.com/icons 
+https://www.cupcom.com.br/programacao/7-modelos-de-avaliacao-em-css-e-html.html
+https://validator.w3.org/
+https://getbootstrap.com.br/docs/4.1/components/modal/
+https://getbootstrap.com.br/docs/4.1/components/forms/?
+  https://pt.stackoverflow.com/questions/280758/mascara-no-form-somente-em-html-e-css
+  
+-->
+  
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+</body>
+
+</html>

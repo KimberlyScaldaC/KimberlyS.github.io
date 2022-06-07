@@ -1,0 +1,178 @@
+
+.carrossel{
+  position:absolute;
+  margin: 4%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 15px;
+  margin-top:8%;
+}
+.logo{
+  border-radius:10px;
+}
+button {
+  all: unset;
+  cursor: pointer;
+  outline: revert;
+  border: none;
+}
+
+a:visited{
+text-decoration:none;
+color:black;
+}
+
+/*- +++++++++++++++++++++++++ -*/
+.botao_navbar{
+  background-color:#f8f9fa;
+  border: none;
+  margin:3px;
+  all: unset;
+  cursor: pointer;
+  outline: revert;
+}
+.menu{
+  border-width: 0 0 1px 0;
+  border-style:solid;
+  border-color: #8c52ff;
+}
+/*- +++++++++++++++++++++++++ -*/
+.tela_login{
+  max-width: auto;
+  height: 324px;
+  border-radius: 15px;
+  margin: 7%;
+  margin-top:15%;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+.centerlg{
+  margin: 0 auto !important;
+  float: none !important;
+}
+.botao{
+  border-radius: 10px;
+  text-align: right;
+}
+.cor3{
+  color:#FF0000;
+  margin:1%;
+}
+.cor{
+  text-align: center;
+  margin:1%;
+}
+/*- +++++++++++++++++++++++++ f8f9fa 8c52ff 6c757d   -*/ 
+.tela_avaliacao{
+  height: auto;
+  border-radius: 15px;
+  background-color:#8c52ff;
+  padding:1%;
+}
+.nome_avaliacao{
+  text-align: center;
+}
+.avaliacao_pessoa{
+  width: 100px;
+  height: auto;
+  border-radius: 15px;
+  background-color:#fff;
+  border-color: #8c52ff;
+  border-width: 5px;
+  padding:1%;
+}
+.pessoa_opiniao{
+  margin-top:4%;
+  color: #3c4044;
+  text-align: center;
+}
+.foto{
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  margin:1%;
+  margin-left: 15%;
+}
+div.box {
+	margin:0;
+  padding:0;
+	display: inline-block;
+  text-align: center;
+}
+.corAvaliacao{
+  text-align: center;
+  color:#fff;
+}
+.blocktext{
+  display: block;
+  text-align: center;
+}
+/*- +++++++++++++++++++++++++ -*/
+
+.tela_rodape{
+  height: auto;
+  width:100%;
+  margin-top: 3%;
+  background-color:#f8f9fa;
+  border-width: 1px 0  0  0;
+  border-style:solid;
+  border-color: #8c52ff;
+  position: absolute;
+}
+.alinhamento{
+  text-align: center;
+}
+.centralizar{
+  white-space: nowrap;
+  margin: 1%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.textoLogo{
+  text-align: left;
+}
+footer {
+  display: block;
+}
+
+
+
+/*-------  FIM DO PAGINA INICIAL  -------*/ 
+.alinhamentoL{
+  text-align: center;
+  margin-top:1%;
+}
+.tela_cadastro{
+  background-color:#f8f9fa;
+  margin-top:2%;
+  border-width: 1px 1px 1px 1px;
+  border-style:solid;
+  border-color: #8c52ff;
+  border-radius: 15px;
+}
+.fastamento{
+  padding:1%;
+}
+/*  */
+
+input[type='file'] {
+  display: none
+}
+
+.input-wrapper label {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+
+  padding: 6px 20px;
+  border-width: 1px 1px 1px 1px;
+  border-style:solid;
+  border-color: #c4c4c4;
+}
+
+.input-wrapper label:hover {
+  background-color: #fff
+}
